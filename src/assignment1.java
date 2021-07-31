@@ -32,7 +32,7 @@ public class assignment1 {
 
     //3. შემოგვდის რიცხვი. გამოვიტანოთ შეტყობინება ეს რიცხვი ლუწია თუ კენტი.
 
-        System.out.println("\nTask 3: Please enter a number below to define if it is even or not");
+        System.out.println("\nTask 3: Please enter a number below to determine if it is even");
 
         int b = input.nextInt();
 
@@ -48,14 +48,32 @@ public class assignment1 {
 
         System.out.println("\nTask 4: Please enter three numbers below to sort it ascending and calculate their average");
 
-        int c = input.nextInt();
-        int d = input.nextInt();
-        int e = input.nextInt();
+        int x = input.nextInt();
+        int y = input.nextInt();
+        int z = input.nextInt();
 
+        int average = (x + y + z ) / 3;
 
-        int average = (c + d + e ) / 3;
+        if (x < y && y < z){
 
-        System.out.println("Result: Ascending order is " + " Average is " + average);
+            System.out.println("Result: Ascending order is " + x + "," + y + "," + z + "; Average is " + average);
+
+        } else if (x < z && z < y){
+
+            System.out.println("Result: Ascending order is " + x + "," + z + "," + y + "; Average is " + average);
+        } else if (y < x && x < z){
+
+            System.out.println("Result: Ascending order is " + y + "," + x + "," + z + "; Average is " + average);
+        } else if (y < z && z < x){
+
+            System.out.println("Result: Ascending order is " + y + "," + z + "," + x + "; Average is " + average);
+        } else if (z < x && x < y){
+
+            System.out.println("Result: Ascending order is " + z + "," + x + "," + y + "; Average is " + average);
+        } else if (z < y && y < x){
+
+            System.out.println("Result: Ascending order is " + z + "," + y + "," + x + "; Average is " + average);
+        }
 
 
 
